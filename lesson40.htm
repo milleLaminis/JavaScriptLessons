@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <meta http-equiv="refresh" content=""/>
+    <title>Курс по JavaScript</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrapper">
+<div id="bUp"></div>
+<div id="workSpace">
+<script type="text/javascript">
+
+//parseInt(), parseFloat(), Number()
+
+//parseInt() преабразовывает строку в число.
+
+//parseFloat() преабразовывает десятичные числа.
+
+//Number() преабразовывает любой объект в число.
+
+
+
+
+var count = "5.66";
+
+var newCount = parseInt(count); // преабразовывает строку в число.
+
+var test = 65;
+var result = newCount + test;
+document.write("Результат работы parseInt() : "+result);
+
+document.write("<br />");
+
+if (isNaN(newCount)){
+document.write("это строка: "+count);
+}
+else{
+document.write("это число: "+count);
+}
+
+
+document.write("<br />");
+
+var bool = false;
+var bool2 = true;
+var result2 = Number(bool);
+var result3 = Number(bool2);
+document.write(result2+":_:"+result3);
+
+
+
+
+
+</script>
+</div>  
+</div>
+<div id="bBottom"></div> 
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <meta http-equiv="refresh" content=""/>
+    <title>Курс по JavaScript</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrapper">
+<div id="bUp"></div>
+<div id="workSpace">
+<script type="text/javascript">
+//метод Math -( с анг. математика) он позволяет работать с числами.(округлить, вычислить синус и т.д.)...
+
+var numberArray = [34.82, 12.90, 17.01, 78.51];
+
+var myMetod = prompt(numberArray,"Math(\"round\", \"ceil\" или \"floor\");");
+    
+        document.write("Исходный массив: var numberArray = [34.82, 12.90, 17.01, 78.51];");
+        document.write("<br />");
+
+function myMath(anyArray,typeMath){
+    
+    if(typeMath == "round"){
+        document.write("<strong>round</strong> - Если дробная часть числа равна 0.5 или больше, то аргумент округляется к следующему большему целому. Если дробная часть меньше, чем 0.5, то округление производится до ближайшего меньшего целого.<br />");
+}
+    else if(typeMath == "ceil"){
+        document.write("<strong>ceil</strong> - округляет числа в большую степень<br />");
+}
+    else if(typeMath == "floor"){
+        document.write("<strong>floor</strong> - округляет числа в меньшую степень<br />");        
+    }
+    
+document.write("<br />");
+    
+    for(var i = 0; i < anyArray.length; i++){
+        if(typeMath == "round"){
+            anyArray[i] = Math.round(anyArray[i]);
+            document.write(anyArray[i]+"<br />");       
+            }
+        else if(typeMath == "ceil"){
+            result = Math.ceil(anyArray[i]);
+            document.write(result+"<br />");
+        }
+        else if(typeMath == "floor"){
+            anyArray[i] = Math.floor(anyArray[i]);
+            document.write(anyArray[i]+"<br />");
+        }
+        else{
+            document.write("Вы ошиблись. Повторите попытку!<br />");
+        }
+    }
+}
+
+myMath(numberArray,myMetod);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</div>  
+</div>
+<div id="bBottom"></div> 
+</body>
+</html>
