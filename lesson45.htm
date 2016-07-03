@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <meta http-equiv="refresh" content=""/>
+    <title>Курс по JavaScript</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrapper">
+<div id="bUp"></div>
+<div id="workSpace">
+<script type="text/javascript">
+//объект Date - текущае время пользователя.
+// 1 января 1970 год.
+// getTime(). - милисекунды от этой даты. Помогает работать с датами не сегоднейшего дня.   
+// в 1сек = 1000 м/с.
+
+var now = new Date();
+
+var from1970 = now.getTime() / 1000; // кол-во сек с 1970.
+var from1970 = (now.getTime() / (1000 * 60)); // кол-во минут.
+var from1970 = (now.getTime() / (1000 * 60 * 60)); // кол-во часов.
+var from1970 = (now.getTime() / (1000 * 60 * 60 * 24)); // кол-во дней.
+
+
+var ny = new Date(2016, 0, 1, 0, 0, 0); //год, месяц, число, часы, мин, сек. (ОБЪЕКТ не сегоднейшей даты).
+
+var from1970ToNy = (ny.getTime() / (1000 * 60 * 60 * 24));
+
+document.write("До нового года осталось: " + (Math.round(from1970ToNy) - Math.round(from1970)));
+document.write("<br />");
+var dayWeek = ["Воскресенье", "Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
+document.write("Это будет день недели: " + dayWeek[ny.getDay()]);
+
+var test = new Date(1000*60*60*24); //кол-во м/с в сутках (дата 2 января 1970г.)
+var test = new Date(1000*60*60*24*5); //через 5 дней от 01.01.1970г.
+
+document.write("<br />" + test)
+
+
+
+
+
+</script>
+</div>  
+</div>
+<div id="bBottom"></div> 
+</body>
+</html>
